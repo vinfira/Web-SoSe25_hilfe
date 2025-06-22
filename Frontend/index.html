@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Studenten-Wochenplaner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Studenten-Wochenplaner</h1>
+  <div id="planner">
+    <!-- Hier erscheinen die Einträge -->
+  </div>
+  <form id="entryForm">
+    <input type="text" name="content" placeholder="Eintrag..." required />
+    <select name="type">
+      <option value="Vorlesung">Vorlesung</option>
+      <option value="Erinnerung">Erinnerung</option>
+    </select>
+    <select name="day">
+      <option value="Montag">Montag</option>
+      <option value="Dienstag">Dienstag</option>
+      <option value="Mittwoch">Mittwoch</option>
+      <option value="Donnerstag">Donnerstag</option>
+      <option value="Freitag">Freitag</option>
+    </select>
+    <input type="color" name="color" value="#a3d2ca" />
+    <button type="submit">Hinzufügen</button>
+  </form>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #4a4e69;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#planner {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.day-column {
+  background-color: #f0efeb;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.entry {
+  background-color: #a3d2ca;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.entry button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
