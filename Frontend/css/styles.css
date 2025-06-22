@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #f3f3f3, #e0eafc);
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgb(192, 233, 252);
+  color: rgb(255, 255, 255);
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 1000px;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+form input, form select, form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: #7a4eaa;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #5d3790;
+}
+
+#entries {
+  display: flex;
+  flex-wrap: nowrap; /* verhindert Umbruch */
+  justify-content: space-between;
+  overflow-x: auto; /* ermöglicht Scrollen bei kleinen Bildschirmen */
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.day-column {
+  flex: 1 1 0; /* gleichmäßige Breite, darf aber kleiner werden */
+  min-width: 140px;
+  background: #ffffffdd;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.day-column h2 {
+  text-align: center;
+  color: #5e60ce;
+  margin-bottom: 0.5rem;
+}
+
+.entry {
+  background-color: #ddd;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  color: #333;
+  position: relative;
+  font-size: 0.9rem;
+  word-wrap: break-word;
+}
+
+.entry .delete-btn {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.5rem;
+  border: none;
+  background: transparent;
+  color: #900;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
