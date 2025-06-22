@@ -1,0 +1,85 @@
+/* styles.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fef6f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 1rem;
+  color: #7a4eaa;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+form input, form select, form button {
+  padding: 0.7rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  min-width: 120px;
+}
+
+form button {
+  background-color: #b28ef5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #9b6ee3;
+}
+
+#entries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.entry {
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #fff;
+  position: relative;
+  background-color: #aaa;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.entry:hover {
+  transform: scale(1.02);
+}
+
+.entry .delete-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.7rem;
+  background: #ff5e5e;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 24px;
+  height: 24px;
+  font-size: 1rem;
+  line-height: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.entry .delete-btn:hover {
+  background: #d84343;
+}
