@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  text-align: center;
+  text-align: center; /* Überschrift zentrieren */
   padding: 2rem 1rem;
   background: rgb(192, 233, 252);
   color: rgb(255, 255, 255);
@@ -20,7 +20,7 @@ header {
 }
 
 form {
-  display: flex;
+  display: flex; /* Flexbox für horizontale Anordnung */
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
@@ -29,7 +29,7 @@ form {
   max-width: 1000px;
   background: white;
   border-radius: 1rem;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05); /* sanfte Schatten für das Formular */
 }
 
 form input, form select, form button {

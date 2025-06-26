@@ -1,25 +1,25 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
+<!DOCTYPE html> <!--Sagt dem Browser, dass es sich um eine HTML5-Datei handelt -->
+<html lang="de"> <!--legt die Sprache auf Deutsch fest-->
+<head> <!--Meta Informationen der Seite-->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Studenten-Wochenplaner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!--Stellt sicher, dass die Seite auf mobilen Geräten gut aussieht-->
+  <title>Studenten-Wochenplaner</title> <!--Titel der Seite, der im Browser-Tab angezeigt wird-->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body> <!--Hauptinhalt der Seite-->
   <header>
-    <h1>☠️ Meine Woche ☠️</h1>
+    <h1>☠️ Meine Woche ☠️</h1> <!--Überschrift der Seite-->
   </header>
 
-  <main>
-    <form id="entryForm">
-      <select id="type" required>
+  <main> <!--Hauptbereich der Seite-->
+    <form id="entryForm"> <!--Formular zum Hinzufügen neuer Einträge, wird in der JS Datei so genannt-->
+      <select id="type" required> <!--Dropdown-Menü zur Auswahl des Eintragstyps, wird in der Datenbank als type.value gespeichert-->
         <option value="" disabled selected>Typ wählen</option>
         <option value="Vorlesung">📚 Vorlesung</option>
         <option value="Erinnerung">⏰ Erinnerung</option>
       </select>
 
-      <select id="day" required>
+      <select id="day" required> <!--Dropdown Menü zur Auswahl des Tages, wird in der DB als entry.day gespeichert. Wird gebraucht, um die Einträge in den Feldern day.column anzuzeigen-->
         <option value="" disabled selected>Wochentag wählen</option>
         <option value="Montag">Montag</option>
         <option value="Dienstag">Dienstag</option>
@@ -30,12 +30,12 @@
         <option value="Sonntag">Sonntag</option>
       </select>
 
-      <input type="text" id="content" placeholder="Inhalt" required />
-      <input type="color" id="color" value="#aad8d3" />
-      <button type="submit">Hinzufügen</button>
+      <input type="text" id="content" placeholder="Inhalt" required /> <!--Textfeld für den Inhalt des Eintrags, wird in der DB als entry.content gespeichert-->
+      <input type="color" id="color" value="#aad8d3" /> <!--Farbwähler für die Farbe des Eintrags, wird in der DB als entry.color gespeichert-->
+      <button type="submit">Hinzufügen</button> <!--Button zum Absenden des Formulars, der die Daten an das Backend sendet (POST)-->
     </form>
 
-    <div id="entries">
+    <div id="entries"> <!--Container für die Einträge, die aus der Datenbank geladen werden-->
       <div class="day-column" data-day="Montag"><h2>Montag</h2></div>
       <div class="day-column" data-day="Dienstag"><h2>Dienstag</h2></div>
       <div class="day-column" data-day="Mittwoch"><h2>Mittwoch</h2></div>
@@ -45,7 +45,7 @@
       <div class="day-column" data-day="Sonntag"><h2>Sonntag</h2></div>
     </div>
   </main>
-
-  <script src="src/script.js"></script>
+<!--Im JS wird mit document.querySelector(.day-column(data.day="Dienstag" die passende Spalte gefunden, um den Eitrag dort einzufügen))-->
+  <script src="src/script.js"></script> <!--Verbindet die JS Datei. Kommuniziert mit dem Backend über fetch() und aktualisiert den Inhalt von #entries-->
 </body>
 </html>
